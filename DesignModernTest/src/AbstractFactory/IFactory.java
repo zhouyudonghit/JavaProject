@@ -1,6 +1,6 @@
 package AbstractFactory;
 
 public interface IFactory {
-	Engine createEngine();
-	Aircondition createAircondition();
+    Engine createEngine();
+    Aircondition createAircondition();
 }

@@ -5,13 +5,13 @@ public class ProductAFactory implements IFactory{
 	@Override
 	public Engine createEngine() {
 		// TODO Auto-generated method stub
-		return null;
+		return new EngineA();
 	}
 
 	@Override
 	public Aircondition createAircondition() {
 		// TODO Auto-generated method stub
-		return null;
+		return new AirconditionA();
 	}
 
 }
