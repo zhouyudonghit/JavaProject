@@ -1,7 +1,4 @@
-/AbstractFactory/
-/Builder/
-/FactoryMethod/
-/Main.class
+/ClassAdapter/
+/ObjectAdapter/
 /Prototype/
-/SimpleFactory/
-/SingleInstance/
+/InterfaceAdapter/
