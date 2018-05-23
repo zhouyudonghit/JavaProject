@@ -3,3 +3,7 @@
 /Prototype/
 /InterfaceAdapter/
 /Decorator/
+/DynamicProxy/
+/StaticProxy/
+/CglibProxy/
+/Fade/
