@@ -1,9 +1,3 @@
-/ClassAdapter/
-/ObjectAdapter/
-/Prototype/
-/InterfaceAdapter/
-/Decorator/
-/DynamicProxy/
-/StaticProxy/
-/CglibProxy/
-/Fade/
+/Bridge/
+/Composite/
+/Flyweight/
