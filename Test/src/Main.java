@@ -1,3 +1,6 @@
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -8,34 +11,29 @@ import Extends.Son;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnsupportedEncodingException {
 		// TODO Auto-generated method stub
-		List<String> list = new ArrayList<>();
-		list.add("a");
-		list.add("b");
-		list.add("c");
-		Iterator<String> it = list.iterator();
-		while(it.hasNext())
-		{
-			if(it.next().equals("a"))
-			{
-				it.remove();
-			}
+		String content = "";
+		try {
+			content = URLEncoder.encode("dsfdsf&","utf-8");
+			System.out.println(content);
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		String content2 = URLDecoder.decode(content, "utf-8");
+		System.out.println(content2);
 		
-		System.out.println(list);
+		String test = "pdf";
+		System.out.println(test);
+		test = "\"" + test +"\""; 
+		System.out.println(test);
+		test = "\"" + test +"\""; 
+		System.out.println(test);
 		
-		long b = -1;
-		int k = (int) b;
-		System.out.println(k);
-		
-		int g = new Long(b).intValue();
-		System.out.println(g);
-		
-		DateTest dateTest = new DateTest();
-		dateTest.test2();
-		
-		int a = Son.i;
+		String str = "1.00001";
+		int num = Integer.parseInt(null);
+		System.out.println(num);
 	}
 
 }

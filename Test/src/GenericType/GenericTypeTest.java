@@ -21,5 +21,23 @@ public class GenericTypeTest {
 		
 		System.out.println(list4);
 	}
-
+	
+	public <T> void test2(T t)
+	{
+		
+	}
+	
+	public void test3()
+	{
+//		Father f = new Son();
+//		f.door();
+		
+		Father f2 = new Father<String>() {
+			public void test(String...stri)
+			{
+				//System.out.println(x);
+			}
+		};
+		f2.door();
+	}
 }
