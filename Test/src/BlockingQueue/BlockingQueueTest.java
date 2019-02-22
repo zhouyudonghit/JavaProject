@@ -123,6 +123,7 @@ public class BlockingQueueTest {
 		int count = 100;
 		List list = new ArrayList<>();
 		List syncList = Collections.synchronizedList(list);
+		syncList.iterator()
 		long start = System.nanoTime();
 		Thread thread1 = new Thread(new Runnable() {
 
@@ -187,6 +188,7 @@ public class BlockingQueueTest {
 		list.add("2");
 		list.add("3");
 		list.add("4");
+		list.iterator()
 		new Thread(new Runnable() {
 
 			@Override

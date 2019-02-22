@@ -65,4 +65,89 @@ public class ThreadTest {
 		Thread thread = new Thread(runnable);
 		thread.start();
 	}
+	
+	public void test4()
+	{
+		runnable = new Runnable()
+				{
+
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						while(true) {
+							System.out.println("running");
+						}
+					}
+			
+				};
+		Thread thread = new Thread(runnable);
+		thread.start();
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		thread.interrupt();
+		System.out.println("after interrupt");
+	}
+	
+	public void test5()
+	{
+		Thread thread1 = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				System.out.println("here1");
+			}
+			
+		});
+		
+		Thread thread2 = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				try {
+					Thread.sleep(10000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				System.out.println("here2");
+			}
+			
+		});
+		
+		thread1.start();
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("here3");
+		
+		thread2.start();
+		
+		try {
+		thread1.join();
+		thread2.join();
+		}catch(Exception e)
+		{
+			
+		}
+		System.out.println("here4");
+	}
 }
