@@ -12,7 +12,16 @@ public class Main {
         
         //new Test().test2();
         
-        Animal animal = new Cat(0);
+//        Father f = new Son();
+//        f.test();
+        
+//        Wine a = new JNC();
+//        a.fun1();
+        
+        JNC jnc = new JNC();
+        Object obj = new Object();
+        jnc.fun3(obj);
+        System.out.println(obj);
 	}
 
 }

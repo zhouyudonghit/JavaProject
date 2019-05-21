@@ -23,9 +23,9 @@ public abstract class Father {
 		System.out.println("father constructer");
 	}
 	
-	public static void test()
+	public void test()
 	{
-		
+		System.out.println("father test()");
 	}
 	
 	public int getType()
@@ -37,5 +37,6 @@ public abstract class Father {
 	{
 		return Collections.synchronizedList(new ArrayList<>());
 	}
+	
 
 }

@@ -40,4 +40,10 @@ public class GenericTypeTest {
 		};
 		f2.door();
 	}
+	
+	<T> T getObject()
+	{
+		String s = "1";
+		return (T)s;
+	}
 }
