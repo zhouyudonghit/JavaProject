@@ -14,17 +14,17 @@ public class ClassLoaderTest {
 	    System.out.println("String的类加载器是："+s.getClass().getClassLoader());
 	}
 	
-	public void test2()
+	public void test2() throws ClassNotFoundException
 	{
 		MyClassLoader loader = new MyClassLoader();
 		try {
-			Class c = loader.loadClass("ClassLoader.HighRichHandsome");
+			Class c = loader.findClass("ClassLoader.HighRichHandsome");
 			System.out.println("Loaded by 1:" + c.getClassLoader());
 			Person p = (Person) c.newInstance();
 			p.say();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
+			HighRichHandsome man = (HighRichHandsome) c.newInstance();
+		    man.say();
 		} catch (InstantiationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -32,5 +32,18 @@ public class ClassLoaderTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+//		try {
+//			Class c = loader.findClass("ClassLoader.HighRichHandsome");
+//			System.out.println("Loaded by 1:" + c.getClassLoader());
+//			Person p = (Person) c.newInstance();
+//			p.say();
+//		} catch (InstantiationException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IllegalAccessException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 }
