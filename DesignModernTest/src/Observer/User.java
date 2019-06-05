@@ -1,6 +1,6 @@
 package Observer;
 
-public class User implements Observer{
+public class User implements IObserver{
     private String name;
     
     public User(String name)

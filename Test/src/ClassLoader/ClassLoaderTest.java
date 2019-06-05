@@ -1,5 +1,8 @@
 package ClassLoader;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 public class ClassLoaderTest {
 	public void test()
 	{
@@ -45,5 +48,37 @@ public class ClassLoaderTest {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
+	}
+	
+	
+	public void test3()
+	{
+		MyClassLoader loader = new MyClassLoader();
+		try {
+			Class c = loader.findClass("ClassLoader.HighRichHandsome");
+			System.out.println("Loaded by 1:" + c.getClassLoader());
+			Object obj = c.newInstance();
+			System.out.println(obj);
+			Method method = c.getMethod("test2", null);
+			method.invoke(obj, null);
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

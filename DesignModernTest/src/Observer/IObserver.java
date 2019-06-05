@@ -5,6 +5,6 @@ package Observer;
  * @author localuser
  *
  */
-public interface Observer {
+public interface IObserver {
     public void update(String message);
 }

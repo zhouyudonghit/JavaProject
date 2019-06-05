@@ -3,23 +3,23 @@ package Observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WeChatServer implements IObserverable{
+public class SyncWeChatServer implements IObserverable{
 	private List<IObserver> list = new ArrayList<>();
     private String message;
     
 	@Override
-	public void registerObserver(IObserver o) {
+	public synchronized void registerObserver(IObserver o) {
 		// TODO Auto-generated method stub
 		list.add(o);
 	}
 	@Override
-	public void removeObserver(IObserver o) {
+	public synchronized void removeObserver(IObserver o) {
 		// TODO Auto-generated method stub
 		list.remove(o);
 		
 	}
 	@Override
-	public void notifyObserver() {
+	public synchronized void notifyObserver() {
 		// TODO Auto-generated method stub
 		for(IObserver o:list)
 		{
@@ -32,5 +32,4 @@ public class WeChatServer implements IObserverable{
         //消息更新，通知所有观察者
         notifyObserver();
     }
-
 }
