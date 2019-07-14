@@ -5,5 +5,10 @@ public class Test extends Son{
 	{
 		type = 3;
 	}
+	
+	public static void test()
+	{
+		System.out.println("Test,test");
+	}
 
 }

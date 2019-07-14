@@ -13,5 +13,4 @@ public class Son extends Father{
 	{
 		System.out.println("son test()");
 	}
-
 }

@@ -22,6 +22,8 @@ public class Main {
         Object obj = new Object();
         jnc.fun3(obj);
         System.out.println(obj);
+        Father father = new Test();
+        father.test();
 	}
 
 }

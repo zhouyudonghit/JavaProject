@@ -52,5 +52,10 @@ public class DateTest {
 		System.out.println(date5);
 	}
 	
-	
+	public void test3()
+	{
+		Date date = new Date();
+		System.out.println(date.getTime());
+		System.out.println(System.currentTimeMillis());
+	}
 }
