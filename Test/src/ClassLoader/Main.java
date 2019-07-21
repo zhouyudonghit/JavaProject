@@ -5,10 +5,10 @@ import java.lang.reflect.Method;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException {
 		// TODO Auto-generated method stub
 		MyClassLoader loader = new MyClassLoader();
-		Class c = loader.findClass("ClassLoader.ClassLoaderTest");
+		Class c = loader.loadClass("ClassLoader.ClassLoaderTest");
 		int a = -5;
 		long b = a;
 		System.out.println(b);
@@ -36,20 +36,20 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		try {
-			ClassLoaderTest test = (ClassLoaderTest) c.newInstance();
-			test.test2();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+//		try {
+//			ClassLoaderTest test = (ClassLoaderTest) c.newInstance();
+//			test.test2();
+//		} catch (ClassNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (InstantiationException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IllegalAccessException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		Class.forName("");
 	}
 
 }

@@ -1,11 +1,11 @@
-package Thread;
+package MathTest;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ThreadTest test = new ThreadTest();
-		test.test6();
+		MathTest test = new MathTest();
+		test.test();
 	}
 
 }

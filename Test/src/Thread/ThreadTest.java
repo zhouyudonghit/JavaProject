@@ -150,4 +150,26 @@ public class ThreadTest {
 		}
 		System.out.println("here4");
 	}
+	
+	public void test6()
+	{
+		Thread thread = new Thread(new Runnable()
+				{
+
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						System.out.println("hello,hello");
+					}
+			
+				});
+		thread.start();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		thread.start();
+	}
 }

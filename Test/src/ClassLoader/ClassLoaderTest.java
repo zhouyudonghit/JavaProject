@@ -21,13 +21,15 @@ public class ClassLoaderTest {
 	{
 		MyClassLoader loader = new MyClassLoader();
 		try {
-			Class c = loader.findClass("ClassLoader.HighRichHandsome");
+			String myPath = "C:\\Users\\yudongzhou\\Desktop\\HighRichHandsome.class";
+//			Class c = loader.loadClass("ClassLoader.HighRichHandsome");
+			Class c = loader.loadClass("ClassLoader.HighRichHandsome");
 			System.out.println("Loaded by 1:" + c.getClassLoader());
 			Person p = (Person) c.newInstance();
 			p.say();
 			
-			HighRichHandsome man = (HighRichHandsome) c.newInstance();
-		    man.say();
+//			HighRichHandsome man = (HighRichHandsome) c.newInstance();
+//		    man.say();
 		} catch (InstantiationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

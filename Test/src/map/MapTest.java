@@ -1,6 +1,7 @@
 package map;
 
 import java.util.HashMap;
+import java.util.Hashtable;
 
 public class MapTest {
 	public void test()
@@ -16,5 +17,7 @@ public class MapTest {
 			System.out.println(map2.get(key));
 		}
 		System.out.println(map2.get(2));
+		
+		Hashtable table = new Hashtable();
 	}
 }

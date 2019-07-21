@@ -6,8 +6,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,14 +17,20 @@ import java.nio.file.Paths;
 public class MyClassLoader extends ClassLoader{
 	public Class<?> findClass(String name)
 	{
-		byte[] bt = loadClassData(name);
-		return defineClass(name,bt,0,bt.length);
-//		return loadClassDataFromFile(name);
+//		byte[] bt = loadClassData(name);
+//		return defineClass(name,bt,0,bt.length);
+		return loadClassDataFromFile(name);
 	}
 	
 	private byte[] loadClassData(String className)
 	{
-		InputStream is = getClass().getClassLoader().getResourceAsStream(className.replace(".", "/")+".class");
+		try {
+		String myPath = "C:\\Users\\yudongzhou\\Desktop\\HighRichHandsome.class";
+		File file = new File(myPath);
+		URL url = file.toURL();
+		System.out.println(url.toString());
+		//getResourceAsStream读取的文件路径只局限与工程的源文件夹中，包括在工程src根目录下，以及类包里面任何位置，但是如果配置文件路径是在除了源文件夹之外的其他文件夹中时，该方法是用不了的。
+		InputStream is = getClass().getClassLoader().getResourceAsStream(url.toString());
 		System.out.println("Loaded by 2:" + getClass().getClassLoader());
 		ByteArrayOutputStream byteSt = new ByteArrayOutputStream();
 		int len = 0;
@@ -36,6 +44,11 @@ public class MyClassLoader extends ClassLoader{
 			e.printStackTrace();
 		}
 		return byteSt.toByteArray();
+		}catch(Exception e)
+		{
+			
+		}
+		return null;
 	}
 	
 	private Class<?> loadClassDataFromFile(String name)
