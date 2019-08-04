@@ -2,7 +2,9 @@ package BackTracking;
 
 /**
  * @author Administrator
- *八皇后算法，包括递归和非递归算法
+ *八皇后算法，包括递归和迭代算法
+ *经验证，递归算法比迭代算法要高，因为递归算法方便剪枝，但是迭代算法不能剪枝，其实回溯算法无所谓迭代算法，因为这只是遍历，无所谓用到什么中间结果，如果
+ *非得说要用到中间结果，递归算法反而更容易利用中间结果
  */
 public class EightQueenTest {
 	private int[] indexes = new int[8];
