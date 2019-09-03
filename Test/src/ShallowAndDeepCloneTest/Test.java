@@ -28,5 +28,15 @@ public class Test {
 //	            System.out.print((char) cur);  
 //	        }  
 //	        System.out.println();  
-//	    }  
+//	    }
+	
+	public void test1()
+	{
+		TestBean testBean = new TestBean();
+		testBean.setName("test");
+		testBean.setAge(20);
+		System.out.println(testBean);
+		TestBean testBean2 = testBean.clone();
+		System.out.println(testBean2);
+	}
 }

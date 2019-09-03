@@ -172,4 +172,32 @@ public class ThreadTest {
 		}
 		thread.start();
 	}
+	
+	public void test7()
+	{
+		Thread thread = new Thread(new Runnable()
+				{
+
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						System.out.println("begin sleep");
+						try {
+							Thread.sleep(2000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						System.out.println("end sleep");
+						
+						for(int i = 0;i < 100;i++)
+						{
+							System.out.println("i = "+i);
+						}
+					}
+			
+				});
+		thread.start();
+		thread.interrupt();
+	}
 }

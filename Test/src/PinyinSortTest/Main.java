@@ -1,12 +1,11 @@
-package map;
-
-import Thread.ThreadTest;
+package PinyinSortTest;
 
 public class Main {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		MapTest test = new MapTest();
-		test.test1();
+       SortTest test = new SortTest();
+       test.sort();
 	}
 
 }

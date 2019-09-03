@@ -9,7 +9,7 @@ public class Main {
 //		String s2 = new String("add");
 //		System.out.println(s2);
 		Test test = new Test();
-		test.test();
+		test.test1();
 	}
 
 }

@@ -1,12 +1,11 @@
-package map;
-
-import Thread.ThreadTest;
+package EqualTest;
 
 public class Main {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		MapTest test = new MapTest();
-		test.test1();
+		int a;
+		a.
 	}
 
 }

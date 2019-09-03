@@ -3,6 +3,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 public class DateTest {
 	public void test()
@@ -57,5 +59,18 @@ public class DateTest {
 		Date date = new Date();
 		System.out.println(date.getTime());
 		System.out.println(System.currentTimeMillis());
+		System.out.println(DateUtil.dateToString(date, DateUtil.DATE_PATTERN_3));
+		
+		System.out.print(DateUtil.stringToDate("2019-08-17T11:51:47.812 +0800", DateUtil.DATE_PATTERN_3));
+	}
+	
+	public void test4()
+	{
+		Calendar gregorianCalendar = new GregorianCalendar(TimeZone.getDefault());
+		//gregorianCalendar.setTimeInMillis(millis);
+		gregorianCalendar.get(14);
+		Calendar ca = Calendar.getInstance();
+		System.out.print(ca.get(14));
+		System.out.print(ca);
 	}
 }

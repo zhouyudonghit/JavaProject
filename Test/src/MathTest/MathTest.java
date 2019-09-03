@@ -39,4 +39,12 @@ public class MathTest {
 	}
 	
 	
+	public void test3()
+	{
+		double d1 = 0.0252;
+        double d2 = 0.019600000000000003;
+//        0.044800000000000006
+        System.out.println(Double.valueOf("0.044800000000000003"));
+	}
+	
 }

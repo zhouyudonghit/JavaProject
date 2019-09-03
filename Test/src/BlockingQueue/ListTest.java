@@ -47,4 +47,27 @@ public class ListTest {
 		obj = null;
 		System.out.println(list.get(0));
 	}
+	
+	public void test9()
+	{
+		List<String> list = null;
+		for(String str:list)
+		{
+			
+		}
+	}
+	
+	public void test10()
+	{
+		List<String> list1 = new ArrayList<>();
+		List<String> list2 = new ArrayList<>();
+		list1.add(new String("test1"));
+		list1.add(new String("test2"));
+		list1.add("test1");
+		list1.add("test2");
+		System.out.print("list1.size = "+list1.size());
+		list2.add(new String("test1"));
+		list1.removeAll(list2);
+		System.out.print("list1.size = "+list1.size());
+	}
 }
