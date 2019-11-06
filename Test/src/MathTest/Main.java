@@ -5,7 +5,8 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		MathTest test = new MathTest();
-		test.test();
+		test.test3();
+//		test.test4();
 	}
 
 }

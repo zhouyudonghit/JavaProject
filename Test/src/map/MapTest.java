@@ -30,5 +30,6 @@ public class MapTest {
 		map.put("1", "1");
 		System.out.print(map.size());
 		TreeMap<String,String> map2;
+		System.out.println(this.getClass().getName());
 	}
 }

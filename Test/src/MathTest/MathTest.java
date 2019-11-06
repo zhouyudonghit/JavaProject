@@ -42,9 +42,37 @@ public class MathTest {
 	public void test3()
 	{
 		double d1 = 0.0252;
+		System.out.println("d1 = "+d1);
         double d2 = 0.019600000000000003;
-//        0.044800000000000006
+        System.out.println("d2 = "+d2);
+        double d3 = 0.044800000000000003;
+        System.out.println("d3 = "+String.valueOf(d3));
+        System.out.println("d1 + d2 = "+String.valueOf(d1+d2));
         System.out.println(Double.valueOf("0.044800000000000003"));
+        System.out.println(1 - 0.42);
+        System.out.println(2.4 + 1.2);
+        System.out.println(4.015 * 100);
+        System.out.println(123.1 / 100);
+        System.out.println(MathUtil.sum(d1, d2));
+//        double d3 = 0.00173000000002;
+//        double d4 = 0.00134;
+//        System.out.println(d3+d4);
+//        System.out.println(d3+d4+"");
+        float f1 = 0.0252f;
+        float f2 = 0.019600000000000003f;
+//        System.out.println("f2 = "+f2);
+//        System.out.println(String.valueOf(f1+f2));
 	}
 	
+	public void test4()
+	{
+//		double d1 = 2.3d;
+//		double d2 = Math.ceil(d1);
+//		System.out.println(d2);
+//		int a = new Double(d2).intValue();
+//		System.out.println(a);
+		float f = 0.008106819f;
+		System.out.println(f*251.64f);
+	}
+
 }

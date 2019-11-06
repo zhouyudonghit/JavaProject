@@ -29,7 +29,8 @@ public class MathUtil {
     public static double sum(double d1,double d2){
         BigDecimal bd1 = new BigDecimal(Double.toString(d1));
         BigDecimal bd2 = new BigDecimal(Double.toString(d2));
-        return bd1.add(bd2).doubleValue();
+        //return bd1.add(bd2).doubleValue();
+        return Double.valueOf(bd1.add(bd2).toString());
     }
 
     /**
@@ -86,4 +87,17 @@ public class MathUtil {
         return bd1.divide
                 (bd2,scale,BigDecimal.ROUND_HALF_UP).doubleValue();
     }
+    
+  //float类型保留小数点后n位数，返回保留了n位小数的float类型数据
+  	public static float keep(float f,int n){
+  		BigDecimal   bd   =   new   BigDecimal(f);  
+  		//保留小数点后n位，并四舍五入
+  		//其中 BigDecimal.ROUND_HALF_UP 指定四舍五入,如果是BigDecimal.ROUND_DOWN 则不会进行四舍五入
+  		bd= bd.setScale(n,BigDecimal.ROUND_HALF_UP);
+  		// 将BigDecimal类型转换为float类型
+  		double d = 0.00345;
+  	    BigDecimal bd2 = new BigDecimal(d);
+  	    
+  		return bd.floatValue();
+  	}
 }

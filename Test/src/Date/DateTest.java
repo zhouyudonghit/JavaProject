@@ -1,10 +1,14 @@
 package Date;
+import java.net.SocketException;
+import java.net.SocketTimeoutException;
+import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
+import java.util.Timer;
 
 public class DateTest {
 	public void test()
@@ -73,4 +77,24 @@ public class DateTest {
 		System.out.print(ca.get(14));
 		System.out.print(ca);
 	}
+	
+	public static double[] a(double[] dArr, double d) {
+        double[] dArr2 = new double[dArr.length];
+        double d2 = 0.0d;
+        for (int i = 0; i < dArr.length; i++) {
+            double d3 = 0.0d;
+            double d4 = 0.0d;
+            double d5 = 0.0d;
+            for (double d6 : dArr) {
+                double d7 = d4 - d2;
+                d7 = Math.exp(-((d7 * d7) / ((2.0d * d) * d)));
+                d3 += d6 * d7;
+                d4 += 1.0d;
+                d5 += d7;
+            }
+            dArr2[i] = d3 / d5;
+            d2 += 1.0d;
+        }
+        return dArr2;
+    }
 }

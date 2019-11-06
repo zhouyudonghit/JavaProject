@@ -7,6 +7,8 @@ public class Main {
 		// TODO Auto-generated method stub
 		MapTest test = new MapTest();
 		test.test1();
+		
+		ThreadLocal locl;
 	}
 
 }
