@@ -1,6 +1,6 @@
 package GenericType;
 
-public abstract class Father<T> {
+public class Father<T> {
 	
 	public void door(T...ts )
 	{

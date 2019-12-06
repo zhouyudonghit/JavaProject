@@ -70,4 +70,17 @@ public class ListTest {
 		list1.removeAll(list2);
 		System.out.print("list1.size = "+list1.size());
 	}
+	
+	public void test11()
+	{
+		List<String> list1 = new ArrayList<>();
+		String[] strs = list1.toArray(new String[list1.size()]);
+		System.out.print(strs.length);
+		strs = (String[]) new Object[] {};
+	}
+	
+	public void testre(String[] objs)
+	{
+		System.out.print(objs.length);
+	}
 }

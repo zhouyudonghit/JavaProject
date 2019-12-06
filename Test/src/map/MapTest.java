@@ -12,6 +12,7 @@ public class MapTest {
 		map.put(1, "1");
 		map.put(2,"2");
 		map.put(2,"22");
+		map.remove(key)
 		
 		HashMap map2 = map;
 		for(Object key:map2.keySet())

@@ -5,25 +5,33 @@ import BlockingQueue.BlockingQueueTest;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-        //System.out.println(Son.data);
-        //System.out.println(Son1.data);
-        //System.out.println(Father.data);
-        
-        //new Test().test2();
-        
-//        Father f = new Son();
-//        f.test();
-        
-//        Wine a = new JNC();
-//        a.fun1();
-        
-        JNC jnc = new JNC();
-        Object obj = new Object();
-        jnc.fun3(obj);
-        System.out.println(obj);
-        Father father = new Test();
-        father.test();
+		Father1 father = new Father1();
+		Father1 child = new Child();
+		father.doSomething(new Eat());
+		child.doSomething(new Drink());
 	}
 
+}
+
+class Eat{
+}
+class Drink{
+}
+
+class Father1{
+	public void doSomething(Eat arg){
+		System.out.println("爸爸在吃饭");
+	}
+	public void doSomething(Drink arg){
+		System.out.println("爸爸在喝水");
+	}
+}
+
+class Child extends Father1{
+	public void doSomething(Eat arg){
+		System.out.println("儿子在吃饭");
+	}
+	public void doSomething(Drink arg){
+		System.out.println("儿子在喝水");
+	}
 }

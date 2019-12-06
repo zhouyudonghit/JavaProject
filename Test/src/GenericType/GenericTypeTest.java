@@ -46,4 +46,11 @@ public class GenericTypeTest {
 		String s = "1";
 		return (T)s;
 	}
+	
+	public void test4()
+	{
+		System.out.println(Father.class);
+		Father<String> father = new Father<>();
+		System.out.print(father.getClass());
+	}
 }

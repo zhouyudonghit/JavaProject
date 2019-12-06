@@ -62,6 +62,18 @@ public class MathTest {
         float f2 = 0.019600000000000003f;
 //        System.out.println("f2 = "+f2);
 //        System.out.println(String.valueOf(f1+f2));
+        
+        float f_v1 = 20;  
+		float f_v2 = 20.3f;  
+		float f_v3 = 20.5f;  
+		      
+		double d_v1 = 20;  
+		double d_v2 = 20.3;  
+		double d_v3 = 20.5;
+		
+		System.out.println((f_v1 == d_v1)?"true":"false"); 
+		System.out.println(f_v2 == d_v2?"true":"false");  
+		System.out.println(f_v3 == d_v3?"true":"false");
 	}
 	
 	public void test4()
