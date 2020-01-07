@@ -1,11 +1,11 @@
-package Format;
+package UriTest;
 
-public class MainActivity {
+public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Test test = new Test();
-		test.test();
+		UriTest test = new UriTest();
+		test.test2();
 	}
 
 }

@@ -1,6 +1,7 @@
 package BlockingQueue;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ListTest {
@@ -74,6 +75,9 @@ public class ListTest {
 	public void test11()
 	{
 		List<String> list1 = new ArrayList<>();
+		list1.remove(null);
+		list1.add(null);
+		list1.add(null);
 		String[] strs = list1.toArray(new String[list1.size()]);
 		System.out.print(strs.length);
 		strs = (String[]) new Object[] {};
@@ -81,6 +85,6 @@ public class ListTest {
 	
 	public void testre(String[] objs)
 	{
-		System.out.print(objs.length);
+		
 	}
 }

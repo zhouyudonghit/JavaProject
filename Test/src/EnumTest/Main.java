@@ -1,11 +1,11 @@
-package Reflect;
+package EnumTest;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ReflectTest test = new ReflectTest();
-		test.test3();
+		EnumTest test = new EnumTest();
+		test.test1();
 	}
 
 }

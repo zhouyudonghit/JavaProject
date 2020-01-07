@@ -52,5 +52,15 @@ public class GenericTypeTest {
 		System.out.println(Father.class);
 		Father<String> father = new Father<>();
 		System.out.print(father.getClass());
+		double d = 0d;
+		List<Double> list = new ArrayList<>();
+		list.add(d);
+		test5(d);
+	}
+	
+	public void test5(Double d)
+	{
+		Integer i =0 ;
+		i.compareTo(anotherInteger)
 	}
 }

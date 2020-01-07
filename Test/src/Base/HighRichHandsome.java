@@ -1,4 +1,6 @@
-package ClassLoader;
+package Base;
+
+import ClassLoader.Person;
 
 public class HighRichHandsome implements Person{
 	

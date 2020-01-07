@@ -4,6 +4,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import Base.PrintUtil;
+
 public class ReflectTest {
 	public void test()
 	{
@@ -64,5 +66,22 @@ public class ReflectTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	//测试创建对象
+	public void test3()
+	{
+		try {
+			TestBean testBean = TestBean.class.newInstance();
+			TestBean testBean2 = testBean.getClass().newInstance();
+			//forName里面的参数必须是带有包名的路径，否则会找不到类，抛异常
+			Class<TestBean> mclass = (Class<TestBean>) Class.forName("Reflect.TestBean");
+			TestBean testBean3 = mclass.newInstance();	
+		}catch (Exception e)
+		{
+			PrintUtil.println(e);
+		}
+		
+		
 	}
 }
