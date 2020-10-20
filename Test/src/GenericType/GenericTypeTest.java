@@ -90,15 +90,17 @@ public class GenericTypeTest {
 //		System.out.println(Father.class.getSuperclass());
 //		System.out.println(Integer.class.getGenericSuperclass());
 //		System.out.println(Integer.class.getSuperclass());
-//		ParameterizedType parameterizedType = (ParameterizedType) Son.class.getGenericSuperclass();
-//		ParameterizedTypeImpl i;
-//		System.out.println(parameterizedType.getClass().getName());
-//		System.out.println(parameterizedType);
-//		Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
-//		for(Type actualTypeArgument: actualTypeArguments) {
-//			System.out.println(actualTypeArgument.getClass().getName());
-//		    System.out.println(actualTypeArgument);
-//		} 
+		ParameterizedType parameterizedType = (ParameterizedType) Son.class.getGenericSuperclass();
+		ParameterizedTypeImpl i;
+		System.out.println(parameterizedType.getClass().getName());
+		System.out.println(parameterizedType);
+		Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
+		for(Type actualTypeArgument: actualTypeArguments) {
+			System.out.println(actualTypeArgument.getClass().getName());
+		    System.out.println(actualTypeArgument);
+		    ((Class)actualTypeArgument).newInstance();
+		    Integer i = Class.forName(actualTypeArgument.getTypeName());
+		} 
 //		
 //		ParameterizedType parameterizedType = (ParameterizedType) Son.class.getGenericInterfaces()[0];
 //		System.out.println(parameterizedType.getClass().getName());
