@@ -9,7 +9,7 @@ public class Main {
         GenericTypeTest test = new GenericTypeTest();
 //        int a = test.getObject();
 //        System.out.println(a);
-		test.test4();
+        test.test6();
 	}
 
 }

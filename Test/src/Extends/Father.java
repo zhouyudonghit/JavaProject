@@ -38,5 +38,8 @@ public abstract class Father {
 		return Collections.synchronizedList(new ArrayList<>());
 	}
 	
-
+	public void test(Object obj)
+	{
+		
+	}
 }

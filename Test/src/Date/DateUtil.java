@@ -10,6 +10,7 @@ public class DateUtil {
     public static String DATE_PATTERN_3 = "yyyy-MM-dd'T'HH:mm:ss.SSS Z";
     public static String DATE_PATTERN_4 = "yyyy.MM.dd";
     public static String DATE_PATTERN_5 = "yyyy-MM-dd HH:mm:ss.sss";
+    public static String DATE_PATTERN_6 = "yyyyÄêMMÔÂ";
 	public static Date clearDateForWeekMonthData(Date date)
     {
         Calendar calendar = Calendar.getInstance();
