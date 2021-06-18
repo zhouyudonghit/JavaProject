@@ -37,7 +37,7 @@ public class DateTest {
 //		date.setMonth(date.getMonth()+1);
 //		System.out.println(date.getTime());
 		date = new Date(date.getTime()+3600*1000-1);
-		System.out.println(DateUtil.dateToString(date, DateUtil.DATE_PATTERN_1));
+		System.out.println(DateUtil.dateToString(date, DateUtil.DATE_PATTERN_8));
 	}
 	
 	public void test2()

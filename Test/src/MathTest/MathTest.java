@@ -83,8 +83,21 @@ public class MathTest {
 //		System.out.println(d2);
 //		int a = new Double(d2).intValue();
 //		System.out.println(a);
-		float f = 0.008106819f;
-		System.out.println(f*251.64f);
+		float f = 111111112f;
+		System.out.println(f);
+		System.out.print(7*24*3600*1000);
+		System.out.println(Long.SIZE);
+		
+		float scale = 800*1.0f/799;
+		System.out.print(scale);
+		
+	}
+	
+	public void test5()
+	{
+		long i = -1;
+		System.out.println(Long.toBinaryString(i));
+		System.out.println(Long.bitCount(i));
 	}
 
 }

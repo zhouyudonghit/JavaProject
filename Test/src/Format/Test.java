@@ -10,6 +10,7 @@ public class Test {
     public static final String FORMAT_1 = "#.##";
     public static final String FORMAT_2 = "0.00";
     public static final String FORMAT_3 = "0.0";
+    public static final String FORMAT_4 = "##0.0";
     
 	public void test()
 	{
@@ -22,11 +23,15 @@ public class Test {
 //		Double num = 69.26545; 
 //		PrintUtil.println(String.format("%.2f", num));
 		
-		double d = -0.601;
-		PrintUtil.println(formatStringHalfUp(FORMAT_0,d));
-		PrintUtil.println(formatStringHalfUp(FORMAT_1,d));
-		PrintUtil.println(formatStringHalfUp(FORMAT_2,d));
-		PrintUtil.println(formatStringHalfUp(FORMAT_3,d));
+		double d = 0.2;
+//		PrintUtil.println(formatStringHalfUp(FORMAT_0,d));
+//		PrintUtil.println(formatStringHalfUp(FORMAT_1,d));
+//		PrintUtil.println(formatStringHalfUp(FORMAT_2,d));
+//		PrintUtil.println(formatStringHalfUp(FORMAT_3,d));
+//		PrintUtil.println(formatStringHalfUp(FORMAT_4,d));
+		
+		String str = "Login";
+		System.out.println(str.contains("login"));
 	}
 
 	public static String formatStringHalfUp(String format, double num)

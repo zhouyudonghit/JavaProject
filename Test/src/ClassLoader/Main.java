@@ -7,11 +7,11 @@ public class Main {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 		// TODO Auto-generated method stub
+		ClassLoaderTest test = new ClassLoaderTest();
+		test.test();
 		MyClassLoader loader = new MyClassLoader();
+		System.out.println("loader.getParent() = " + loader.getParent());
 		Class c = loader.loadClass("ClassLoader.ClassLoaderTest");
-		int a = -5;
-		long b = a;
-		System.out.println(b);
 		try {
 			Object obj = c.newInstance();
 			System.out.println(obj);

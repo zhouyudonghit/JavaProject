@@ -22,6 +22,7 @@ public class BlockingQueueTest {
 		List list = new ArrayList<>();
 		list.add("");
 		list.add(new Object());
+		mBlockingQueue.put(e);
 		System.out.println(list.toString());
 	}
 

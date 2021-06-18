@@ -11,6 +11,9 @@ public class DateUtil {
     public static String DATE_PATTERN_4 = "yyyy.MM.dd";
     public static String DATE_PATTERN_5 = "yyyy-MM-dd HH:mm:ss.sss";
     public static String DATE_PATTERN_6 = "yyyy年MM月";
+    public static String DATE_PATTERN_7 = "yyyy.M.d";
+    public static String DATE_PATTERN_8 = "yyyy 年 MM 月 dd 日";
+    
 	public static Date clearDateForWeekMonthData(Date date)
     {
         Calendar calendar = Calendar.getInstance();

@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ListTest listTest = new ListTest();
-		listTest.test14();
+		listTest.test16();
 	}
 
 }
