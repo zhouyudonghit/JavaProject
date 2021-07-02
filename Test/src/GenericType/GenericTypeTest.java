@@ -92,15 +92,26 @@ public class GenericTypeTest {
 //		System.out.println(Integer.class.getSuperclass());
 		ParameterizedType parameterizedType = (ParameterizedType) Son.class.getGenericSuperclass();
 		ParameterizedTypeImpl i;
-		System.out.println(parameterizedType.getClass().getName());
+//		System.out.println(parameterizedType.getClass().getName());
 		System.out.println(parameterizedType);
 		Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
 		for(Type actualTypeArgument: actualTypeArguments) {
-			System.out.println(actualTypeArgument.getClass().getName());
-		    System.out.println(actualTypeArgument);
-		    ((Class)actualTypeArgument).newInstance();
-		    Integer i = Class.forName(actualTypeArgument.getTypeName());
-		} 
+//			System.out.println(actualTypeArgument.getClass().getName());
+			System.out.println(actualTypeArgument instanceof Class);
+		    System.out.println(actualTypeArgument.getTypeName());
+//		    try {
+//				((Class)actualTypeArgument).newInstance();
+//			} catch (InstantiationException | IllegalAccessException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+		    try {
+				Class<?> d = Class.forName(actualTypeArgument.getTypeName());
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}  
 //		
 //		ParameterizedType parameterizedType = (ParameterizedType) Son.class.getGenericInterfaces()[0];
 //		System.out.println(parameterizedType.getClass().getName());
@@ -114,8 +125,8 @@ public class GenericTypeTest {
 		
 //		Father<Integer> father = new Father<Integer>();
 //		System.out.println(new Father<Integer>() {}.toString());
-		System.out.println(new Father<Integer>() {}.getClass().getGenericSuperclass());
-		System.out.println((new ITest<Integer>() {}.getClass().getGenericInterfaces())[0]);
+//		System.out.println(new Father<Integer>() {}.getClass().getGenericSuperclass());
+//		System.out.println((new ITest<Integer>() {}.getClass().getGenericInterfaces())[0]);
 //		ParameterizedType parameterizedType = (ParameterizedType) father.getClass();
 //		System.out.println(parameterizedType);
 //		Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
@@ -124,4 +135,21 @@ public class GenericTypeTest {
 //		}
 	}
 	
+	public void test7(List<?> list)
+	{
+		for(Object str : list)
+		{
+			
+		}
+	}
+	
+	public void test8()
+	{
+		List<Son> list = new ArrayList<>();
+		test7(list);
+		
+		Father<String> f1 = new Father();
+		Father<? super String> f2 = new Father();
+		f2 = f1;
+	}
 }
