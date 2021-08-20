@@ -99,5 +99,27 @@ public class MathTest {
 		System.out.println(Long.toBinaryString(i));
 		System.out.println(Long.bitCount(i));
 	}
-
+	
+	public void test6()
+	{
+		float percent = (float)54324/(float)345;
+		System.out.println("percent = "+percent);
+		// 保留一位乘十再除十，保留两位改为100，以此类推
+		percent = ((float)Math.round(percent*10))/10;
+		System.out.println("percent = "+percent);
+		
+		String value = "77.1234568";
+		System.out.print(Float.valueOf(value));
+	}
+	
+	/**
+	 * @hide
+	 */
+	public void test7()
+	{
+		int start = 5;
+		String l = "2";
+		start += l.length() + 2;
+		System.out.println(start);
+	}
 }

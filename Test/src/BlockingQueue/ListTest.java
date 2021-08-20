@@ -214,4 +214,11 @@ public class ListTest {
 			System.out.print(queue.poll());
 		}
 	}
+	
+	public void test18()
+	{
+		List list1 = new ArrayList();
+		List list2 = null;
+		list1.addAll(list2);
+	}
 }

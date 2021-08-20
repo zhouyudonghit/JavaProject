@@ -1,7 +1,7 @@
 package synctest;
 
 public abstract class Parent {
-	public synchronized  void add()
+	public synchronized  static void add()
 	{
 		System.out.println("add begin");
 		try {

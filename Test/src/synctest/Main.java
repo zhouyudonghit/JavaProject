@@ -7,13 +7,15 @@ public class Main {
         Parent p = new Son();
         Parent p1 = new Son1();
         Parent p2 = new Son();
+        Son son = new Son();
+        Son1 son1 = new Son1();
         new Thread(new Runnable()
         		{
 
 					@Override
 					public void run() {
 						// TODO Auto-generated method stub
-						p.add();
+						son.add();
 					}
         	
         		}).start();
@@ -23,7 +25,7 @@ public class Main {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				p.add();
+				son1.add();
 			}
 	
 		}).start();

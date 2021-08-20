@@ -7,11 +7,15 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
    
-		String testString = "12345678";
-		System.out.println(MD5Test.getMD5(testString));
+//		String testString = "12345678";
+//		System.out.println(MD5Test.getMD5(testString));
+//		
+//	
+//		System.out.println(random());
 		
-	
-		System.out.println(random());
+		String key = "123456";
+		String value = "dsafasfdsfdasfsdfdsfsdf";
+		System.out.println(HmacSHA256Util.hmacSha256(key, value));
 	}
 
 	private static String random()

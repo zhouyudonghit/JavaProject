@@ -135,7 +135,7 @@ public class GenericTypeTest {
 //		}
 	}
 	
-	public void test7(List<?> list)
+	public void test7(List list)
 	{
 		for(Object str : list)
 		{
@@ -149,7 +149,14 @@ public class GenericTypeTest {
 		test7(list);
 		
 		Father<String> f1 = new Father();
-		Father<? super String> f2 = new Father();
+		Father f2 = new Father();
 		f2 = f1;
+	}
+	
+	public void test9()
+	{
+		List<String> list = new ArrayList<>();
+		list.add("1");
+		String s = list.get(0);
 	}
 }

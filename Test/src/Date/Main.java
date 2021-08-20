@@ -21,7 +21,7 @@ public class Main {
 //        test(obj);
 //        obj = null;
 //        System.out.print("main thread,obj = "+obj);
-        
+        System.out.print(DateUtil.getDaysOfMonth(new Date()));
 	}
 	
 	public static void test(Object obj)

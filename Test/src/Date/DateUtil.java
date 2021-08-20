@@ -49,4 +49,10 @@ public class DateUtil {
         return date;
     }
 
+    public static int getDaysOfMonth(Date date)
+    {
+    	Calendar calendar = Calendar.getInstance();
+    	calendar.setTime(date);
+    	return calendar.getMaximum(Calendar.DAY_OF_MONTH);
+    }
 }

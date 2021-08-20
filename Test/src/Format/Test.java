@@ -40,4 +40,25 @@ public class Test {
         dFormat.setRoundingMode(RoundingMode.HALF_UP);
         return dFormat.format(num);
     }
+	
+	public void test2()
+	{
+		float f = 0.009f;
+		//对于0.9来说，如果用"#.0"来格式化，最后是。9
+		DecimalFormat df =new DecimalFormat("#.##");
+//		df.setRoundingMode(RoundingMode.HALF_DOWN);
+		String result = df.format(f);
+		System.out.println("result = "+result);
+		System.out.println(Math.round(f));
+		
+		float h = 2.000f;
+		//对于0.9来说，如果用"#.0"来格式化，最后是。9
+		DecimalFormat df2 =new DecimalFormat("0.#");
+//		df2.setRoundingMode(RoundingMode.HALF_DOWN);
+		String result2 = df2.format(h);
+		System.out.println("result = "+result2);
+		System.out.println(Math.round(h));
+		String s = "0.5";
+		System.out.println(Float.valueOf(s));
+	}
 }
