@@ -22,6 +22,7 @@ public class MapTest {
 		System.out.println(map2.get(2));
 		
 		Hashtable table = new Hashtable();
+		table.put(key, value)
 	}
 	
 	public void test1()
@@ -32,5 +33,9 @@ public class MapTest {
 		System.out.print(map.size());
 		TreeMap<String,String> map2;
 		System.out.println(this.getClass().getName());
+	}
+	
+	public void test2()
+	{
 	}
 }

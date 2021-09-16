@@ -12,7 +12,6 @@ public class ClassLoaderTest {
 	    System.out.println("系统类装载器的父类加载器——扩展类加载器:" + extensionClassLoader);
 	    ClassLoader bootstrapClassLoader = extensionClassLoader.getParent();
 	    System.out.println("扩展类加载器的父类加载器——引导类加载器:" + bootstrapClassLoader);
-	    
 	    String s = "hello";
 	    System.out.println("String的类加载器是："+s.getClass().getClassLoader());
 	}

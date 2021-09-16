@@ -6,7 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		MathTest test = new MathTest();
 //		test.test3();
-		test.test7();
+		test.test8();
 	}
 
 }

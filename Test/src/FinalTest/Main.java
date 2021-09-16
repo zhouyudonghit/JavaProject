@@ -2,6 +2,8 @@ package FinalTest;
 
 import java.util.List;
 
+import Base.ITest;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -9,12 +11,8 @@ public class Main {
 		String str = new String("123");
         test(str);
         System.out.println(str);
-        
-        List<String> strs = null;
-        for(String s: strs)
-        {
-        	
-        }
+        ITest test = new Test();
+        test.test();
 	}
 	
 	public static void test(final String str)

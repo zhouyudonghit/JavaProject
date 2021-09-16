@@ -9,6 +9,8 @@ public class ThreadTest {
 	public void test()
 	{
 		ExecutorService es = Executors.newFixedThreadPool(2);
+		Executors.newSingleThreadExecutor();
+		es.shutdown();
 		for(int i = 0;i < 2;i++)
 		{
 		es.submit(new Runnable() {
@@ -144,6 +146,7 @@ public class ThreadTest {
 		try {
 		thread1.join();
 		thread2.join();
+		thread1.interrupt();
 		}catch(Exception e)
 		{
 			
@@ -199,5 +202,107 @@ public class ThreadTest {
 				});
 		thread.start();
 		thread.interrupt();
+	}
+	
+	/**
+	 * 测试Thread.interrupt方法
+	 *无法中断
+	 */
+	public void testInterrupt1()
+	{
+		System.out.println("here1");
+		try {
+		    Thread.currentThread().interrupt();
+		}catch(Exception e)
+		{
+			System.out.println("here3");
+		}
+		System.out.println("here2");
+	}
+	
+	/**
+	 * 中断处于阻塞状态的线程
+	 */
+	public void testInterrupt2()
+	{
+		Thread thread = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				try {
+					System.out.println("begin sleep");
+					Thread.currentThread().sleep(5000);
+			    } catch (InterruptedException ie) {        
+			    	// 由于产生InterruptedException异常，线程终止！
+			    	System.out.println("here1");
+			    }
+			}});
+		thread.start();
+		
+		try {
+			Thread.currentThread().sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		thread.interrupt();
+	}
+	
+	public void testInterrupt3()
+	{
+		Thread thread = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				while(!Thread.currentThread().isInterrupted())
+				{
+					System.out.println("here");
+				}
+				System.out.println("here1");
+			}});
+		thread.start();
+		
+		try {
+			Thread.currentThread().sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		thread.interrupt();
+		
+		Thread.currentThread().stop();
+	}
+	
+	public void testInterrupt4()
+	{
+		Thread thread = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				while(!Thread.currentThread().isInterrupted())
+				{
+					System.out.println("here");
+				}
+				System.out.println("here1");
+			}});
+		thread.start();
+		
+		try {
+			thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		thread.interrupt();
+		
+		Thread.currentThread().stop();
+	}
+	
+	private void test1()
+	{
+		
 	}
 }

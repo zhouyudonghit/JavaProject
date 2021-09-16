@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -209,6 +210,7 @@ public class ListTest {
 		queue.add("test4");
 		queue.add("test5");
 		queue.add("test6");
+		queue.poll(timeout, unit)
 		while(queue.size() != 0)
 		{
 			System.out.print(queue.poll());
@@ -220,5 +222,11 @@ public class ListTest {
 		List list1 = new ArrayList();
 		List list2 = null;
 		list1.addAll(list2);
+	}
+	
+	public void test19()
+	{
+		LinkedList<String> list = new LinkedList<>();
+		list.peek();
 	}
 }
